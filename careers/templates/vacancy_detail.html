@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Рецепты</title>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <div class="card mb-3">
+          <div class="card mb-3">
+              <div class="row g-0">
+                <div class="col-md-4">
+                 <img src="{{ vacancy.image.url }}" class="card-img-top" alt="...">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                     <h1 class="card-title">{{ vacancy.title }}</h1>
+                       <p class="card-text"><small class="text-muted">{{ vacancy.status }}</small> - <small class="text-muted">{{ vacancy.id_kitchen }}</small></p>
+                      <p class="card-text">{{ vacancy.requirements }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div class="card-body">
+              <p class="card-text">{{ vacancy.description }}</p>
+              <h5>Дополниетльно:</h5>
+            <p class="card-text"><small class="text-muted">Работодатель: {{ vacancy.id_employer }}</small></p>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
